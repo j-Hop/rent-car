@@ -27,8 +27,8 @@ body {
     font-display: swap;
     font-size: 12px;
     line-height: 1.5;
-    color: ${(p) => p.theme.colors.dark};
-    background-color: ${(p) => p.theme.colors.white};
+    color: ${(p) => p.theme.color.black};
+    background-color: ${(p) => p.theme.color.white};
 }
 
 code {

@@ -35,7 +35,7 @@ export const Filters = () => {
             <option value="default" hidden>
               Select brand
             </option>
-            {chooseList.make.map(choose => (
+            {chooseList.choose.map(choose => (
               <option key={choose} value={choose}>
                 {choose}
               </option>
