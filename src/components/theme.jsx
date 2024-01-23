@@ -1,7 +1,7 @@
 export const theme = {
     color:{
        white:"#FFFFFF",
-       dark:"#2F2F2F",
+       black: "#121417",
        blue:"#3470FF",
        navyblue:"#0B44CD",
        bginput:"#F7F7FB",
