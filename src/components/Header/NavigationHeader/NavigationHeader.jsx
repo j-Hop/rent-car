@@ -6,9 +6,9 @@ import { useLocation } from "react-router-dom";
 
 export const NavigationHeader = () => {
     const [useClass, setUseClass] = useState(false);
-    const favorites = useSelector(selectFavorite);
+    const favorite = useSelector(selectFavorite);
     const location = useLocation();
-    const favoritePage = location.pathname === `/favorites`;
+    const favoritePage = location.pathname === `/favorite`;
     const className = useClass? `hintlink` : ``;
 
     useEffect(() => {
@@ -18,7 +18,7 @@ export const NavigationHeader = () => {
     return (
         <>
         <StyleLink to="/">Home</StyleLink>
-      {favorites.length === 0 ? (
+      {favorite.length === 0 ? (
         <StyleLink to="/catalog" className={className}>
           Catalog
         </StyleLink>
