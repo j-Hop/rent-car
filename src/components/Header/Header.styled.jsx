@@ -12,11 +12,11 @@ export const Hr = styled.hr`
   margin: 0;
   height: 10px;
   border: none;
-  color: ${theme.color.blue};
+  color: ${theme.colors.blue};
   background-image: linear-gradient(
     90deg,
-    ${theme.color.blue},
-    ${theme.color.blue} 33.33%,
+    ${theme.colors.blue},
+    ${theme.colors.blue} 33.33%,
     transparent 33.33%,
     transparent 100%
   );

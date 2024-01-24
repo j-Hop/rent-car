@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-axios.defaults.baseURL = 'https://65aaecd3081bd82e1d98026b.mockapi.io/';
+axios.defaults.baseURL = 'https://65aaecd3081bd82e1d98026b.mockapi.io';
 
 const params = new URLSearchParams({
   page: 1,

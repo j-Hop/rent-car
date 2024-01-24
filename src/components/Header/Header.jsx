@@ -1,11 +1,11 @@
 import { HeaderWrapper, Hr } from './Header.styled';
-import { NavigationHeader } from './NavigationHeader/NavigationHeader';
+import { Navigation } from './NavigationHeader/Navigation';
 
 export const Header = () => {
   return (
     <>
       <HeaderWrapper>
-        <NavigationHeader />
+        <Navigation />
       </HeaderWrapper>
       <Hr />
     </>

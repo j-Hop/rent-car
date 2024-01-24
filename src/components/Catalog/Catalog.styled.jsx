@@ -15,12 +15,12 @@ export const LoadMoreBtn = styled(Link)`
   margin-bottom: ${theme.spacing(50)};
   display: block;
   text-align: center;
-  color: ${theme.color.blue};
+  color: ${theme.colors.blue};
   font-size: 16px;
   font-weight: 500;
   text-decoration-line: underline;
   transition: color ${theme.transition};
   & :hover {
-    color: ${theme.color.navyblue};
+    color: ${theme.colors.darkblue};
   }
 `;

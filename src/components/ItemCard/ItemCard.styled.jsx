@@ -79,8 +79,9 @@ export const HeartIcon = styled.svg`
   right: 14px;
   width: 18px;
   height: 18px;
+
   &:hover {
-    stroke: ${theme.color.blue};
+    stroke: ${theme.colors.blue};
     @keyframes shadow {
       0% {
         scale: 1;
@@ -99,13 +100,13 @@ export const HeartIcon = styled.svg`
 export const TitleWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  color: ${theme.color.black};
+  color: ${theme.colors.black};
   font-size: 16px;
   font-weight: 500;
   margin-bottom: ${theme.spacing(4)};
 
   & span {
-    color: ${theme.color.blue};
+    color: ${theme.colors.blue};
   }
 `;
 
@@ -125,14 +126,14 @@ export const LearnMoreBtn = styled.button`
   padding: 12px 99px;
   border-radius: 12px;
   border: none;
-  background: ${theme.color.blue};
-  color: ${theme.color.white};
+  background: ${theme.colors.blue};
+  color: ${theme.colors.white};
   font-size: 14px;
   font-weight: 600;
   line-height: 1.42;
   transition: background ${theme.transition};
 
   &:is(:hover, :focus) {
-    background: ${theme.color.navyblue};
+    background: ${theme.colors.darkblue};
   }
 `;

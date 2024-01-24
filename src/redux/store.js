@@ -1,36 +1,37 @@
-import { configureStore } from "@reduxjs/toolkit";
-import { favoriteReducer } from "./favoriteSlice";
-import { filterReducer } from "./filterSlice";
-import { advertReducer } from "./advertSlice";
-import storage from "redux-persist/lib/storage";
+import { configureStore } from '@reduxjs/toolkit';
+import { favoriteReducer } from './favoriteSlice';
+import { advertReducer } from './advertSlice';
+import { filterReducer } from './filterSlice';
+import storage from 'redux-persist/lib/storage';
 import {
-    persistStore,
-    persistReducer,
-    FLUSH,
-    REGISTER,
-    REHYDRATE,
-    PAUSE,
-    PERSIST,
-    PURGE,
-} from "redux-persist"
+  persistStore,
+  persistReducer,
+  FLUSH,
+  REHYDRATE,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+} from 'redux-persist';
 
 const persistConfig = {
-    key : "root",
-    storage,
+  key: 'root',
+  storage,
 };
 
 export const store = configureStore({
-    reducer: {
-        advert: advertReducer,
-        filter: filterReducer,
-        favorite: persistReducer(persistConfig, favoriteReducer),
-    },
-    middleware: getDefaultMiddleware => 
+  reducer: {
+    advert: advertReducer,
+    filter: filterReducer,
+    favorites: persistReducer(persistConfig, favoriteReducer),
+  },
+  middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
-        serializableCheck:{
-            ignoreActions: [FLUSH, REGISTER, REHYDRATE, PAUSE, PERSIST, PAUSE, PURGE]
-        },
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
     }),
+  devTools: process.env.NODE_ENV === 'development',
 });
 
 export const persistor = persistStore(store);

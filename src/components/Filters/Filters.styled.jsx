@@ -9,15 +9,12 @@ export const StyledForm = styled(Form)`
   display: flex;
   justify-content: center;
   align-items: end;
-  &:first-child {
-    /* width: 220px; */
-  }
 `;
 
 export const StyledLabel = styled.label`
   display: flex;
   flex-direction: column;
-  color: ${theme.color.buttontext};
+  color: ${theme.colors.labeltext};
   font-size: 14px;
   font-weight: 500;
   line-height: 1.28;
@@ -28,9 +25,9 @@ export const StyledInput = styled(Field)`
   margin-right: ${theme.spacing(9)};
   padding: 14px 18px;
   border-radius: 14px;
-  border: ${theme.color.bginput};
-  background: ${theme.color.bginput};
-  color: ${theme.color.black};
+  border: ${theme.colors.bginput};
+  background: ${theme.colors.bginput};
+  color: ${theme.colors.black};
   font-size: 18px;
   font-weight: 500;
   line-height: 1.11;
@@ -40,14 +37,14 @@ export const StyledInput = styled(Field)`
   & option {
     font-size: 16px;
     line-height: 1.25;
-    color: ${theme.color.tagtext};
-    background: ${theme.color.white};
+    color: ${theme.colors.droptext};
+    background: ${theme.colors.white};
   }
 
   &.make {
     width: 224px;
   }
-  &.rentalPrice {
+  &.price {
     width: 125px;
   }
 
@@ -57,7 +54,7 @@ export const StyledInput = styled(Field)`
     appearance: none;
     overflow: hidden;
     background: right 14px center no-repeat url(${arrow}),
-      ${theme.color.bginput};
+      ${theme.colors.bginput};
   }
 
   &.left {
@@ -70,7 +67,7 @@ export const StyledInput = styled(Field)`
   }
 
   &:focus {
-    caret-color: ${theme.color.black};
+    caret-color: ${theme.colors.dark};
   }
 `;
 
@@ -79,13 +76,7 @@ export const ButtonSearch = styled.button`
   font-size: 14px;
   font-weight: 600;
   line-height: 1.42;
-  color: ${theme.color.white};
-  background: ${theme.color.blue};
   border-radius: 12px;
   border: transparent;
   transition: background-color ${theme.transition};
-
-  &:is(:hover, :focus) {
-    background-color: ${theme.color.navyblue};
-  }
 `;

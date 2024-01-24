@@ -7,6 +7,7 @@ export const ImageWrapper = styled.p`
   width: 460px;
   height: 248px;
   margin-bottom: ${theme.spacing(7)};
+
   &::before {
     position: absolute;
     top: 50%;
@@ -22,6 +23,7 @@ export const ImageWrapper = styled.p`
     transform: translate(-50%, -50%);
     opacity: 0;
   }
+
   &:hover::before {
     -webkit-animation: circle 0.75s;
     animation: circle 0.75s;
@@ -39,6 +41,7 @@ export const ImageWrapper = styled.p`
       opacity: 0;
     }
   }
+
   @keyframes circle {
     0% {
       opacity: 1;
@@ -65,27 +68,27 @@ export const ImageWrapper = styled.p`
 
 export const ModalTitleWrapper = styled.div`
   margin-bottom: ${theme.spacing(4)};
-  color: ${theme.color.black};
+  color: ${theme.colors.black};
   font-size: 18px;
   font-weight: 500;
   line-height: 1.33;
 
   & span {
-    color: ${theme.color.blue};
+    color: ${theme.colors.blue};
   }
 `;
 
 export const DescriptionText = styled.p`
   margin-top: ${theme.spacing(7)};
   margin-bottom: ${theme.spacing(12)};
-  color: ${theme.color.black};
+  color: ${theme.colors.black};
   font-size: 14px;
   line-height: 1.42;
   max-width: 460px;
 `;
 
 export const TitleAaF = styled.p`
-  color: ${theme.color.black};
+  color: ${theme.colors.black};
   font-size: 14px;
   font-weight: 500;
   line-height: 1.42;
@@ -97,6 +100,7 @@ export const AaFWrapper = styled.div`
   flex-direction: column;
   margin-bottom: ${theme.spacing(12)};
   gap: ${theme.spacing(2)};
+
   & > p {
     max-width: 460px;
     overflow: hidden;
@@ -106,18 +110,19 @@ export const AaFWrapper = styled.div`
 `;
 
 export const RentalConditions = styled.div`
-  /* display: flex; */
-  color: ${theme.color.black};
+  color: ${theme.colors.black};
   font-size: 14px;
   font-weight: 500;
   line-height: 1.42;
   letter-spacing: -0.24px;
+
   & p {
     padding: 7px 14px;
     display: inline-block;
   }
+
   & span {
-    color: ${theme.color.blue};
+    color: ${theme.colors.blue};
     margin-right: ${theme.spacing(4)};
   }
 `;
@@ -127,21 +132,19 @@ export const OrderBtn = styled.a`
   margin-top: ${theme.spacing(12)};
   padding: 12px 50px;
   border-radius: 12px;
-  background: ${theme.color.blue};
-  color: ${theme.color.white};
+  background: ${theme.colors.blue};
+  color: ${theme.colors.white};
   font-size: 14px;
   font-weight: 600;
   line-height: 1.42;
   transition: background ${theme.transition};
 
   &:is(:hover, :focus) {
-    background: ${theme.color.navyblue};
+    background: ${theme.colors.darkblue};
   }
 `;
 
 // ***************** Modal *************************
-
-export const ModalBody = styled.div``;
 
 export const ModalHeader = styled.div`
   height: auto;
@@ -164,13 +167,14 @@ export const CloseBtn = styled.button`
   background: transparent;
 
   & svg {
-    stroke: ${theme.color.black};
-    transition: stroke ${theme.transition};
+    stroke: ${theme.colors.black};
+    transition: stroke ${theme.transition}, scale ${theme.transition};
     scale: 0.98;
+
     &:hover,
     &:focus {
       scale: 1;
-      stroke: ${theme.color.navyblue};
+      stroke: ${theme.colors.darkblue};
     }
   }
 `;

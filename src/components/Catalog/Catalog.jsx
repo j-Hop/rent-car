@@ -7,28 +7,31 @@ import {
   selectAdvertFiltered,
   selectIsLoadMore,
 } from '../../redux/selectors';
- 
+
 export const Catalog = () => {
-const adverts = useSelector(selectAdvert);
-const advertFilter = useSelector(selectAdvertFiltered);
-const isLoadMore = useSelector(selectIsLoadMore);
-const dispatch = useDispatch();
+  const adverts = useSelector(selectAdvert);
+  const isLoadMore = useSelector(selectIsLoadMore);
+  const advertFiltered = useSelector(selectAdvertFiltered);
+  const dispatch = useDispatch();
 
-
-const handleLoadMore = () => {
+  const handleLoadMore = () => {
     dispatch(getMore({ page: Math.ceil(adverts.length / 12) + 1, limit: 12 }));
   };
 
-  return(
+  return (
     <>
-    <CatalogList>
-    {(advertFilter.length > 0 ? advertFilter : adverts).map(item => (
-          <ItemCard key={item.id} advert={item} />
+      <CatalogList>
+        {(advertFiltered.length > 0 ? advertFiltered : adverts).map(item => (
+          <li key={item.id}>
+            <ItemCard advert={item} />
+          </li>
         ))}
-    </CatalogList>
-    {isLoadMore && (
-        <LoadMoreBtn onClick={handleLoadMore}><span>Load more</span></LoadMoreBtn>
-    )}
+      </CatalogList>
+      {isLoadMore && (
+        <LoadMoreBtn onClick={handleLoadMore}>
+          <span>Load more</span>
+        </LoadMoreBtn>
+      )}
     </>
   );
 };

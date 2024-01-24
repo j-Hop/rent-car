@@ -23,8 +23,8 @@ export default function FavoritePage() {
         <Favorite />
       ) : (
         <ErMs>
-          <Ups>NO FAVORITE ELSE</Ups>
-          <svg width="100vw" height="100vh" fill="#0B44CD">
+          <Ups>NO FAVORITE YET</Ups>
+          <svg width="80vw" height="80vh" fill="#0B44CD">
             <use xlinkHref={`${SpriteIcons}#icon-no_favorite`} />
           </svg>
         </ErMs>

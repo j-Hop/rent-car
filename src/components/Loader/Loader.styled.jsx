@@ -1,6 +1,5 @@
-import styled, {keyframes} from "styled-components";
-import { theme } from "components/theme";
-
+import styled, { keyframes } from 'styled-components';
+import { theme } from '../theme';
 
 const spin = keyframes`
   0% {transform: rotate(0deg);}
@@ -24,7 +23,7 @@ export const LoaderWrapper = styled.div`
   top: 0;
   right: 0;
   bottom: 0;
-  background: ${theme.color.black};
+  background: ${theme.colors.black};
   z-index: 15;
   overflow: hidden;
 `;
@@ -32,7 +31,7 @@ export const LoaderWrapper = styled.div`
 export const LoaderBody = styled.div`
   width: 150px;
   height: 150px;
-  border: 1px solid ${theme.color.white};
+  border: 1px solid ${theme.colors.white};
   position: absolute;
   left: 50%;
   top: 50%;
@@ -43,7 +42,7 @@ export const LoaderBody = styled.div`
 export const LoaderLine = styled.div`
   width: 10px;
   height: 2px;
-  background: ${theme.color.white};
+  background: ${theme.colors.white};
   position: absolute;
 
   &:nth-child(1) {
@@ -98,7 +97,7 @@ export const LoaderSubline = styled.div`
   position: absolute;
   width: 3px;
   height: 2px;
-  background: ${theme.color.white};
+  background: ${theme.colors.white};
 
   &:nth-child(7) {
     transform: rotate(22.5deg);
@@ -151,7 +150,7 @@ export const LoaderNeedle = styled.div`
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  border: 1px solid ${theme.color.white};
+  border: 1px solid ${theme.colors.white};
   position: absolute;
   left: 50%;
   top: 50%;
@@ -185,8 +184,8 @@ export const Loading = styled.div`
   font-style: italic;
   left: 0;
   top: 50%;
-  margin-top: 20px;
-  color: ${theme.color.white};
+  margin-top: ${theme.spacing(10)};
+  color: ${theme.colors.white};
   font-weight: bold;
   text-transform: uppercase;
 `;
@@ -196,7 +195,7 @@ export const LoaderCircle1 = styled.div`
   height: 138px;
   left: 5px;
   top: 5px;
-  border: 1px solid ${theme.color.white};
+  border: 1px solid ${theme.colors.white};
   border-radius: 50%;
   position: absolute;
   border-right-color: transparent;

@@ -2,7 +2,7 @@ import { Formik } from "formik";
 import { useDispatch } from 'react-redux';
 import { resetFilters, setFilters } from '../../redux/filterSlice';
 import { getAll, getFiltered } from '../../redux/operation';
-import chooseList from './chooseList.json';
+import makeList from './makeList.json';
 import {
   ButtonSearch,
   StyledForm,
@@ -35,9 +35,9 @@ export const Filters = () => {
             <option value="default" hidden>
               Select brand
             </option>
-            {chooseList.choose.map(choose => (
-              <option key={choose} value={choose}>
-                {choose}
+            {makeList.make.map(make => (
+              <option key={make} value={make}>
+                {make}
               </option>
             ))}
           </StyledInput>
@@ -51,9 +51,9 @@ export const Filters = () => {
             className="price"
           >
             <option value="default" hidden>
-              Select price
+              To $
             </option>
-            {chooseList.options.map(price => (
+            {makeList.options.map(price => (
               <option key={price} value={price}>
                 {price}
               </option>
