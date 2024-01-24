@@ -1,15 +1,15 @@
-import { Formik } from 'formik';
-import { useDispatch } from 'react-redux';
-import { setFilters } from '../../redux/filterSlice';
-import { getAll, getFiltered } from '../../redux/operation';
-import makeList from './makeList.json';
+import { Formik } from "formik";
+import { useDispatch } from "react-redux";
+import { setFilters } from "../../redux/filterSlice";
+import { getAll, getFiltered } from "../../redux/operation";
+import makeList from "./makeList.json";
 import {
   ButtonSearch,
   StyledForm,
   StyledInput,
   StyledLabel,
-} from './Filters.styled';
-import { useState } from 'react';
+} from "./Filters.styled";
+import { useState } from "react";
 
 export const Filters = () => {
   const [buttonState, setButtonState] = useState({
@@ -78,7 +78,7 @@ export const Filters = () => {
         </StyledLabel>
 
         <StyledLabel>
-          Сar mileage / km
+          Car mileage / km
           <StyledInput name="mileageFrom" placeholder="From" className="left" />
         </StyledLabel>
         <StyledLabel>
