@@ -1,13 +1,13 @@
 {
     "make": [
       "Hyundai",
-      "Lamborghini",
+      "Lamborgini",
       "Audi",
       "BMW",
       "Chevrolet",
       "Ford",
       "Lexus",
-      "Porche"
+      "Porsche"
     ],
     "options": [
       "30",
