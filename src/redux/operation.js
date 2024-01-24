@@ -9,9 +9,9 @@ const params = new URLSearchParams({
 });
 
 export const getAll = createAsyncThunk(
-  'advert/fatchAll',async (_, { rejectWithValue }) => {
+  'cars/fatchAll',async (_, { rejectWithValue }) => {
     try {
-      const { data } = await axios.get(`/advert?${params}`);
+      const { data } = await axios.get(`/cars?${params}`);
       return data;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -20,10 +20,10 @@ export const getAll = createAsyncThunk(
 );
 
 export const getMore = createAsyncThunk(
-  'advert/loadMore',
+  'cars/loadMore',
   async ({ page, limit }, { rejectWithValue }) => {
     try {
-      const { data } = await axios.get(`/advert?page=${page}&limit=${limit}`);
+      const { data } = await axios.get(`/cars?page=${page}&limit=${limit}`);
       return data;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -32,14 +32,14 @@ export const getMore = createAsyncThunk(
 );
 
 export const getFiltered = createAsyncThunk(
-  'advert/getFilter',
+  'cars/getFilter',
   async (filters, { rejectWithValue }) => {
     try {
       const completeFilters = {
         make: filters.make,
         rentalPrice: filters.price,
       };
-      const { data } = await axios.get(`/advert`, {
+      const { data } = await axios.get(`/cars`, {
         params: completeFilters,
       });
       return data;
