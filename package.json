@@ -2,7 +2,7 @@
   "name": "rent-car",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://j-Hop.github.io/rent-car/",
+  "homepage": "https://j-hop.github.io/rent-car/",
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",
     "@testing-library/jest-dom": "^5.17.0",
