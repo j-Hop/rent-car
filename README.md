@@ -3,17 +3,17 @@
 ⬆️⬆️⬆️⬆️⬆️⬆️
 
 
-``This project was created using Create React App.
+*``This project was created using Create React App.
 Web application for viewing and being able to rent a car for yourself.
-Users can view the list of available cars, filter them and mark their favorites or choose the one they like more.``
-
-Features ᎓
+Users can view the list of available cars, filter them and mark their favorites or choose the one they like more.``*
+________
+*Features* ᎓
 * View a list of available cars
 * Filter cars based on various criteria (e.g., brand, price)
 * Mark cars as favorites
 * Pagination for browsing through the car list
-
-Technologies ᎓
+________
+*Technologies* ᎓
 * [React.js](https://react.dev/): JavaScript library for building user interfaces.
 * [Redux Toolkit](https://redux-toolkit.js.org/): State management for React applications.
 * [Styled Components](https://styled-components.com/): Styling library for React components.
