@@ -1,4 +1,25 @@
+[CAR-RENTAL](https://res.cloudinary.com/diizikhro/image/upload/v1706925429/readme/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_2024-02-03_035117_srm2vl.png)
 
+
+
+This project was created using Create React App.
+Web application for viewing and being able to rent a car for yourself.
+Users can view the list of available cars, filter them and mark their favorites or choose the one they like more.
+
+Features ᎓
+* View a list of available cars
+* Filter cars based on various criteria (e.g., brand, price)
+* Mark cars as favorites
+* Pagination for browsing through the car list
+
+Technologies ᎓
+HTML  CSS  JavaScript  React  Redux  npm  Figma  VSCode 
+
+* React.js: JavaScript library for building user interfaces.
+* Redux Toolkit: State management for React applications.
+* Styled Components: Styling library for React components.
+* Axios: HTTP client for database operation.
+* MockAPI: Mock API for simulating backend data.
 
 
 
