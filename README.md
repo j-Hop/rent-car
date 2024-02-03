@@ -3,11 +3,11 @@
 ⬆️⬆️⬆️⬆️⬆️⬆️
 
 
-`This project was created using Create React App.
+``This project was created using Create React App.
 Web application for viewing and being able to rent a car for yourself.
-Users can view the list of available cars, filter them and mark their favorites or choose the one they like more.`
+Users can view the list of available cars, filter them and mark their favorites or choose the one they like more.``
 
-<span style="font-family: 'Roboto, sans-serif';">Features</span> ᎓
+Features ᎓
 * View a list of available cars
 * Filter cars based on various criteria (e.g., brand, price)
 * Mark cars as favorites
